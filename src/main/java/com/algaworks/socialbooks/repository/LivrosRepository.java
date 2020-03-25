@@ -1,5 +1,8 @@
 package com.algaworks.socialbooks.repository;
 
-public interface LivrosRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.algaworks.socialbooks.domain.Livro;
+
+public interface LivrosRepository extends JpaRepository<Livro, Long>{
 }
