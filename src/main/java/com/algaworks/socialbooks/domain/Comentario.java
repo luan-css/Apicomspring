@@ -16,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 public class Comentario {
 	@Id
@@ -23,6 +24,7 @@ public class Comentario {
 	private Long id;
 	@NotEmpty(message = "O comentario deve ser preenchido")
 	@Size(max = 1500, message = "O comentário não pode contar mais de 1500 caracteres")
+	@JsonProperty("comentario")
 	private String texto;
 	@JsonInclude(Include.NON_NULL)
 	private String usuario;

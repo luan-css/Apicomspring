@@ -19,12 +19,15 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 public class Livro {
 	@JsonInclude(Include.NON_NULL)
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
 	private Long id;
+	@ApiModelProperty(example = "Harry Potter")
 	private String nome;
 	@JsonInclude(Include.NON_NULL)
 	@JsonFormat(pattern = "dd/MM/yyyy")
